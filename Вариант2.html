@@ -1,0 +1,44 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<script>
+	function hello(){
+		var p=document.getElementById('f');
+		q=p.value;
+		var p=document.getElementById('n');
+		w=p.value;
+		var p=document.getElementById('o');
+		e=p.value;
+		var p=document.getElementById('d');
+		r=p.value;
+		var win=window.open("","","width=800, height=500");
+		win.document.open();
+		var str="<h2>"+q+" и "+r+"</h2><hr> В одном лесу жила маленькая "+q+", которая очень любила "+w+" чудесные песни. У нее так хорошо получалось, что весь лес собирался послушать её! От сороки она узнала, что у людей принято дарить "+r+" любимым исполнителям. А "+r+" она любила также сильно, как и "+w+". Долго грустила "+q+". Но однажды, после очередного импровизированного концерта, "+e+" подлетел к "+q+" и подарил ей... "+r+"! Уж он то был истинным джентельменом! "+q+" была невероятно счастлива!!!</h2><P>";
+		win.document.write(str);
+		str='<input type="button" value="закрыть"'+'onClick="window.close();">';
+		win.document.write(str);
+		win.document.close();
+		}
+</script>
+</head>
+<body>
+<h1 align=center>Сказка</h1>
+<form align=center>
+<div class="form-group">
+	<input type=text value="" name="f" id='f' size="30" placeholder="Имя героя">
+</div>
+<div class="form-group">
+	<input type=text value="" name="n" id='n' size="30" placeholder="Любимое занятие">
+</div>
+<div class="form-group">
+	<input type=text value="" name="o" id='o' size="30" placeholder="Друг героя">
+</div>
+<div class="form-group">
+	<input type=text value="" name="d" id='d' size="30" placeholder="Любимый подарок">
+</div>
+<div class="form-group">
+	<input type=button class="btn btn-success" value="Составить сказку" onClick="hello()">
+</div>
+</form>
+</body>
+</html>
