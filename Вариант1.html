@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<script>
+	function hello(){
+		var p=document.getElementById('f');
+		q=p.value;
+		var p=document.getElementById('n');
+		w=p.value;
+		var p=document.getElementById('o');
+		e=p.value;
+		var p=document.getElementById('d');
+		r=p.value;
+		var p=document.getElementById('l');
+		t=p.value;
+		var p=document.getElementById('z');
+		z=p.value;
+		var win=window.open("","","width=800, height=500");
+		win.document.open();
+		str='<h2>О себе</h2>';
+		win.document.write(str);
+		var str="<h1>Я "+q+" "+w+" "+e+" родился в "+r+" году. Мое любимое занитие это "+t+" ,а не любимое это "+z+"</h1><P>";
+		win.document.write(str);
+		str='<input type="button" value="закрыть"'+'onClick="window.close();">';
+		win.document.write(str);
+		win.document.close();
+		}
+</script>
+</head>
+<body>
+<h1 align=center>Анкета пользователя</h1>
+<form align=center>
+<div class="form-group">
+	<input type=text value="" name="f" id='f' size="30" placeholder="Фамилия">
+</div>
+<div class="form-group">
+	<input type=text value="" name="n" id='n' size="30" placeholder="Имя">
+</div>
+<div class="form-group">
+	<input type=text value="" name="o" id='o' size="30" placeholder="Отчество">
+</div>
+<div class="form-group">
+	<input type=text value="" name="d" id='d' size="30" placeholder="Год рождения">
+</div>
+<div class="form-group">
+	<input type=text value="" name="l" id='l' size="30" placeholder="Любимое занитие">
+</div>
+<div class="form-group">
+	<input type=text value="" name="z" id='z' size="30" placeholder="Не любимое занятие">
+</div>
+<div class="form-group">
+	<input type=button class="btn btn-success" value="Отправить анкету" onClick="hello()">
+</div>
+</form>
+</body>
+</html>
